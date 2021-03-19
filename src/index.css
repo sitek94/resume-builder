@@ -1,19 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ccc;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .page {
   width: 21cm;
-  height: 29.7cm;
+  min-height: 29.7cm;
   margin: 0 auto;
   display: flex;
   background-color: #fff;
+}
+
+/* Horizontal line to mark where the A4 page ends */
+.page::after {
+  position: absolute;
+  top: 29.7cm;
+  left: 0;
+  z-index: -1;
+  content: '';
+  height: 1px;
+  width: 100vw;
+  background-color: #000;
 }
 
 .column {
