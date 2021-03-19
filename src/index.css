@@ -37,6 +37,23 @@ body {
   background-color: #fff;
 }
 
+.column {
+  padding: 15px;
+}
+
+.column.left {
+  flex-basis: 30%;
+  border-right: 1px solid #ccc;
+}
+
+.column.right {
+  flex: 1;
+}
+
+/* ================================================================= */
+/* UTILS */
+/* ================================================================= */
+
 /* Horizontal line to mark where the A4 page ends */
 .page::after {
   position: absolute;
@@ -49,24 +66,18 @@ body {
   background-color: #000;
 }
 
-/* Hide some things when printing/saving as pdf */
+select {
+  position: absolute;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+/* Hide utils when printing or saving as pdf */
 @media print {
+  select,
   .page::after {
     display: none;
   }
-}
-
-.column {
-  padding: 15px;
-}
-
-.column.left {
-  flex-basis: 30%;
-  border-right: 1px solid #ccc;
-}
-
-.column.right {
-  flex: 1;
 }
 
 /* ================================================================= */
