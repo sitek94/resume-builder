@@ -2,6 +2,7 @@ import data from './data/english';
 import Details from './components/details';
 import FullName from './components/full-name';
 import Summary from './components/summary';
+import Projects from './components/projects';
 
 const lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque 
 praesentium deleniti mollitia quae nulla nihil velit dolor laborum, assumenda 
@@ -21,18 +22,7 @@ export default function App() {
       <div className="column right">
         <FullName text={data.fullName} />
         <Summary data={data.summary} />
-
-        <section>
-          <h2>Projects</h2>
-          <ul>
-            {['Project 1', 'Project 2'].map(project => (
-              <li key={project}>
-                <h4>{project}</h4>
-                <p>{lorem}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <Projects data={data.projects} />
 
         <section>
           <h2>Work Experience</h2>
