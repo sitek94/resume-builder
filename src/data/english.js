@@ -1,3 +1,19 @@
+import {
+  // Contact
+  FaGlobe,
+  FaGithub,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+
+  // Interests
+  FaChessKnight,
+  FaReact,
+  FaRegCalendarCheck,
+  FaBook,
+  FaRunning,
+} from 'react-icons/fa';
+
 const data = {
   /**
    * Full name
@@ -23,23 +39,23 @@ const data = {
     list: [
       {
         text: 'macieksitkowski.com',
-        icon: '🌐',
+        icon: <FaGlobe />,
       },
       {
         text: 'github.com/sitek94',
-        icon: '🐙',
+        icon: <FaGithub />,
       },
       {
         text: 'msitkowski94@gmail.com',
-        icon: '✉️',
+        icon: <FaEnvelope />,
       },
       {
         text: '+00 123 456 789',
-        icon: '☎️',
+        icon: <FaPhoneAlt />,
       },
       {
         text: 'Warsaw, Poland',
-        icon: '📌',
+        icon: <FaMapMarkerAlt />,
       },
     ],
   },
@@ -89,11 +105,11 @@ const data = {
   interests: {
     title: 'Interests',
     list: [
-      { text: 'Playing chess', icon: '♟️' },
-      { text: 'Learning new things', icon: '⚛️' },
-      { text: 'Building habits', icon: '📋' },
-      { text: 'Reading', icon: '📖' },
-      { text: 'Being active', icon: '⚽' },
+      { text: 'Playing chess', icon: <FaChessKnight /> },
+      { text: 'Learning new things', icon: <FaReact /> },
+      { text: 'Building habits', icon: <FaRegCalendarCheck /> },
+      { text: 'Reading', icon: <FaBook /> },
+      { text: 'Being active', icon: <FaRunning /> },
     ],
   },
 

@@ -1,3 +1,9 @@
+import {
+  FaCheckSquare as FullCheckIcon,
+  FaRegCheckSquare as CheckIcon,
+  FaRegComment as CommentIcon,
+} from 'react-icons/fa';
+
 import data from './data/english';
 import Details from './components/details';
 import FullName from './components/full-name';
@@ -12,9 +18,9 @@ export default function App() {
     <div className="page">
       <div className="column left">
         <Details data={data.contact} />
-        <Details data={data.keySkills} defaultIcon="✅" />
-        <Details data={data.additionalSkills} defaultIcon="✔️" />
-        <Details data={data.languages} defaultIcon="💬" />
+        <Details data={data.keySkills} defaultIcon={<FullCheckIcon />} />
+        <Details data={data.additionalSkills} defaultIcon={<CheckIcon />} />
+        <Details data={data.languages} defaultIcon={<CommentIcon />} />
         <Details data={data.interests} />
       </div>
 

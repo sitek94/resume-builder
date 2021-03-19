@@ -1,5 +1,14 @@
+/* ================================================================= */
+/* RESET */
+/* ================================================================= */
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 body {
@@ -15,11 +24,15 @@ body {
   overflow-x: hidden;
 }
 
+/* ================================================================= */
+/* LAYOUT */
+/* ================================================================= */
 .page {
   width: 21cm;
   min-height: 29.7cm;
   margin: 0 auto;
   display: flex;
+  color: #222;
   background-color: #fff;
 }
 
@@ -47,7 +60,28 @@ body {
   flex: 1;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+header,
+section {
+  margin-bottom: 25px;
+}
+
+/* ================================================================= */
+/* DETAILS */
+/* ================================================================= */
+
+.details h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+
+.details li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.details svg {
+  font-size: 18px;
+  margin-right: 10px;
 }

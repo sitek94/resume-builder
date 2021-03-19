@@ -1,8 +1,10 @@
-export default function Details({ data, defaultIcon = '❓' }) {
+import { FaQuestion } from 'react-icons/fa';
+
+export default function Details({ data, defaultIcon = <FaQuestion /> }) {
   const { title, list } = data;
 
   return (
-    <section>
+    <section className="details">
       <h3>{title}</h3>
       <ul>
         {list.map(({ icon, text }) => (
