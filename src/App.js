@@ -4,6 +4,7 @@ import FullName from './components/full-name';
 import Summary from './components/summary';
 import Projects from './components/projects';
 import WorkExperience from './components/work-experience';
+import Certificates from './components/certificates';
 
 const lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque 
 praesentium deleniti mollitia quae nulla nihil velit dolor laborum, assumenda 
@@ -25,19 +26,7 @@ export default function App() {
         <Summary data={data.summary} />
         <Projects data={data.projects} />
         <WorkExperience data={data.workExperience} />
-
-        <section>
-          <h2>Certificates</h2>
-          <ul>
-            {['Certificate 1', 'Certificate 2', 'Certificate 3'].map(
-              certificate => (
-                <li key={certificate}>
-                  <h4>{certificate} - provider</h4>
-                </li>
-              ),
-            )}
-          </ul>
-        </section>
+        <Certificates data={data.certificates} />
 
         <section>
           <h2>Education</h2>
