@@ -5,10 +5,7 @@ import Summary from './components/summary';
 import Projects from './components/projects';
 import WorkExperience from './components/work-experience';
 import Certificates from './components/certificates';
-
-const lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque 
-praesentium deleniti mollitia quae nulla nihil velit dolor laborum, assumenda 
-vel iste incidunt asperiores cumque rem quidem minima, eligendi fugit soluta.`;
+import Education from './components/education';
 
 export default function App() {
   return (
@@ -27,18 +24,7 @@ export default function App() {
         <Projects data={data.projects} />
         <WorkExperience data={data.workExperience} />
         <Certificates data={data.certificates} />
-
-        <section>
-          <h2>Education</h2>
-          <ul>
-            {['Institution 1'].map(institution => (
-              <li key={institution}>
-                <h4>{institution} - Date</h4>
-                <p>{lorem}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <Education data={data.education} />
       </div>
     </div>
   );
