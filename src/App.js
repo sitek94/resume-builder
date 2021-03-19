@@ -1,5 +1,7 @@
 import data from './data/english';
 import Details from './components/details';
+import FullName from './components/full-name';
+import Summary from './components/summary';
 
 const lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque 
 praesentium deleniti mollitia quae nulla nihil velit dolor laborum, assumenda 
@@ -17,14 +19,8 @@ export default function App() {
       </div>
 
       <div className="column right">
-        <header>
-          <h1>Maciek Sitkowski</h1>
-        </header>
-
-        <section>
-          <h2>Summary</h2>
-          <p>{lorem}</p>
-        </section>
+        <FullName text={data.fullName} />
+        <Summary data={data.summary} />
 
         <section>
           <h2>Projects</h2>
