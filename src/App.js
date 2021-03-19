@@ -1,43 +1,19 @@
+import data from './data/english';
+import Details from './components/details';
+
 const lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque 
 praesentium deleniti mollitia quae nulla nihil velit dolor laborum, assumenda 
 vel iste incidunt asperiores cumque rem quidem minima, eligendi fugit soluta.`;
-
-const details = (
-  <ul>
-    {['Detail 1', 'Detail 2', 'Detail 3'].map(detail => (
-      <li key={detail}>{detail}</li>
-    ))}
-  </ul>
-);
 
 export default function App() {
   return (
     <div className="page">
       <div className="column left">
-        <section>
-          <h3>Contact</h3>
-          {details}
-        </section>
-
-        <section>
-          <h3>Key skills</h3>
-          {details}
-        </section>
-
-        <section>
-          <h3>Additional skills</h3>
-          {details}
-        </section>
-
-        <section>
-          <h3>Languages</h3>
-          {details}
-        </section>
-
-        <section>
-          <h3>Interests</h3>
-          {details}
-        </section>
+        <Details data={data.contact} />
+        <Details data={data.keySkills} defaultIcon="✅" />
+        <Details data={data.additionalSkills} defaultIcon="✔️" />
+        <Details data={data.languages} defaultIcon="💬" />
+        <Details data={data.interests} />
       </div>
 
       <div className="column right">
