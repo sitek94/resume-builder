@@ -3,6 +3,7 @@ import Details from './components/details';
 import FullName from './components/full-name';
 import Summary from './components/summary';
 import Projects from './components/projects';
+import WorkExperience from './components/work-experience';
 
 const lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque 
 praesentium deleniti mollitia quae nulla nihil velit dolor laborum, assumenda 
@@ -23,18 +24,7 @@ export default function App() {
         <FullName text={data.fullName} />
         <Summary data={data.summary} />
         <Projects data={data.projects} />
-
-        <section>
-          <h2>Work Experience</h2>
-          <ul>
-            {['Job 1', 'Job 2', 'Job 3'].map(job => (
-              <li key={job}>
-                <h4>{job}</h4>
-                <p>{lorem}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <WorkExperience data={data.workExperience} />
 
         <section>
           <h2>Certificates</h2>
