@@ -2,15 +2,15 @@ export default function Education({ data }) {
   const { title, list } = data;
 
   return (
-    <section id="education">
+    <section className="education">
       <h2>{title}</h2>
       <ul>
         {list.map(({ institution, description, date }) => (
           <li key={description}>
-            <div>
+            <div className="header">
               <h4>{institution}</h4>
 
-              <span>
+              <span className="date">
                 {date.start} - {date.end}
               </span>
             </div>

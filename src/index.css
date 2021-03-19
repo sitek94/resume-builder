@@ -1,6 +1,7 @@
 /* ================================================================= */
 /* RESET */
 /* ================================================================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +13,6 @@ ul {
 }
 
 body {
-  margin: 0;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -27,12 +27,13 @@ body {
 /* ================================================================= */
 /* LAYOUT */
 /* ================================================================= */
+
 .page {
   width: 21cm;
   min-height: 29.7cm;
   margin: 0 auto;
   display: flex;
-  color: #222;
+  color: rgba(0, 0, 0, 0.8);
   background-color: #fff;
 }
 
@@ -48,21 +49,74 @@ body {
   background-color: #000;
 }
 
+/* Hide some things when printing/saving as pdf */
+@media print {
+  .page::after {
+    display: none;
+  }
+}
+
 .column {
   padding: 15px;
 }
 
 .column.left {
   flex-basis: 30%;
+  border-right: 1px solid #ccc;
 }
 
 .column.right {
   flex: 1;
 }
 
-header,
-section {
-  margin-bottom: 25px;
+/* ================================================================= */
+/* REUSABLES */
+/* ================================================================= */
+
+section:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+h2,
+h3,
+h4 {
+  color: #111;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.55;
+}
+
+.sm-border-bottom {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 3px;
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date {
+  font-style: italic;
+  font-size: 13px;
 }
 
 /* ================================================================= */
@@ -78,10 +132,54 @@ section {
 .details li {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .details svg {
   font-size: 18px;
   margin-right: 10px;
+}
+
+/* ================================================================= */
+/* FULL NAME */
+/* ================================================================= */
+
+.full-name {
+  padding-bottom: 12.5px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 12.5px;
+}
+
+.full-name h1 {
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ================================================================= */
+/* WORK EXPERIENCE */
+/* ================================================================= */
+
+.work-experience .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* ================================================================= */
+/* CERTIFICATES */
+/* ================================================================= */
+
+.certificates .provider {
+  font-weight: 400;
+}
+
+/* ================================================================= */
+/* EDUCATION */
+/* ================================================================= */
+
+.education .header {
+  display: flex;
+  justify-content: space-between;
 }
