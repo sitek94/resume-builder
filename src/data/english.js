@@ -39,10 +39,12 @@ const data = {
     list: [
       {
         text: 'macieksitkowski.com',
+        url: 'https://macieksitkowski.com',
         icon: <FaGlobe />,
       },
       {
         text: 'github.com/sitek94',
+        url: 'https://github.com/sitek94',
         icon: <FaGithub />,
       },
       {
@@ -129,6 +131,7 @@ const data = {
           Habit Tracker is my final project for Harvard's CS50 course. It's 
           built as MVP (minimal viable product) and its core functionality is to 
           track user's habits.`,
+        url: 'https://habit-tracker.macieksitkowski.com/',
       },
       {
         name: 'Pocket Globe App',
@@ -136,6 +139,7 @@ const data = {
         description: `
           The app uses D3.js and React to create a highly interactive and responsive 
           globe. It connects to various APIs to get data about selected country.`,
+        url: 'https://sitek94.github.io/pocket-globe-app',
       },
     ],
   },

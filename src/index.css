@@ -98,6 +98,15 @@ li {
   margin-bottom: 10px;
 }
 
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 p {
   line-height: 1.55;
 }
