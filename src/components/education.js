@@ -1,3 +1,5 @@
+import { format } from '../utils';
+
 export default function Education({ data }) {
   const { title, list } = data;
 
@@ -11,7 +13,7 @@ export default function Education({ data }) {
               <h4>{institution}</h4>
 
               <span className="date">
-                {date.start} - {date.end}
+                {format(date.start)} - {format(date.end)}
               </span>
             </div>
 

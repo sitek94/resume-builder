@@ -1,3 +1,5 @@
+import { format } from '../utils';
+
 export default function WorkExperience({ data }) {
   const { title, list } = data;
 
@@ -14,7 +16,7 @@ export default function WorkExperience({ data }) {
               </h4>
 
               <span className="date">
-                {date.start} - {date.end}
+                {format(date.start)} - {format(date.end)}
               </span>
             </div>
 
